@@ -1,29 +1,24 @@
-package com.softserve.webhookbot.bot;
+package com.softserve.webhookbot.entity;
 
 
-import lombok.Getter;
-import lombok.Setter;
 import org.telegram.telegrambots.bots.DefaultBotOptions;
-import org.telegram.telegrambots.bots.TelegramWebhookBot;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.methods.updates.SetWebhook;
-import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.starter.SpringWebhookBot;
 
 
-public class WebHookBot extends SpringWebhookBot {
+public class WebhookBot extends SpringWebhookBot {
     private String webHookPath;
     private String botUserName;
     private String botToken;
     private TelegramFacade telegramFacade;
 
-    public WebHookBot(TelegramFacade telegramFacade, DefaultBotOptions options, SetWebhook setWebhook) {
+    public WebhookBot(TelegramFacade telegramFacade, DefaultBotOptions options, SetWebhook setWebhook) {
         super(options, setWebhook);
         this.telegramFacade = telegramFacade;
     }
-    public WebHookBot(TelegramFacade telegramFacade, SetWebhook setWebhook) {
+    public WebhookBot(TelegramFacade telegramFacade, SetWebhook setWebhook) {
         super(setWebhook);
         this.telegramFacade = telegramFacade;
     }

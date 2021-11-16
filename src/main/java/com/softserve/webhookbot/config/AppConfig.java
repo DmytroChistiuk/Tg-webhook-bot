@@ -1,8 +1,8 @@
 package com.softserve.webhookbot.config;
 
 
-import com.softserve.webhookbot.bot.TelegramFacade;
-import com.softserve.webhookbot.bot.WebHookBot;
+import com.softserve.webhookbot.entity.TelegramFacade;
+import com.softserve.webhookbot.entity.WebhookBot;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.telegram.telegrambots.meta.api.methods.updates.SetWebhook;
@@ -21,8 +21,8 @@ public class AppConfig {
     }
 
     @Bean
-    public WebHookBot springWebhookBot(SetWebhook setWebhook, TelegramFacade telegramFacade) {
-        WebHookBot bot = new WebHookBot(telegramFacade, setWebhook);
+    public WebhookBot springWebhookBot(SetWebhook setWebhook, TelegramFacade telegramFacade) {
+        WebhookBot bot = new WebhookBot(telegramFacade, setWebhook);
         bot.setBotToken(botConfig.getToken());
         bot.setBotUserName(botConfig.getUsername());
         bot.setWebHookPath(botConfig.getWebHookPath());

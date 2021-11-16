@@ -1,14 +1,13 @@
 package com.softserve.webhookbot;
 
-import com.softserve.webhookbot.config.BotConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WebhookBotApplication {
+public class WebhookBotStarter {
 
     public static void main(String[] args) {
-        SpringApplication.run(WebhookBotApplication.class, args);
+        SpringApplication.run(WebhookBotStarter.class, args);
     }
 
 }

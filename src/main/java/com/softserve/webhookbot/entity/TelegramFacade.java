@@ -1,4 +1,4 @@
-package com.softserve.webhookbot.bot;
+package com.softserve.webhookbot.entity;
 
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
